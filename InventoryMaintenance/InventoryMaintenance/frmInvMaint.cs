@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace InventoryMaintenance
 {
-    public partial class frmInvMaint : Form
+    public partial class frmInvMaint : Form //Test: Can you see my comment Jason? - Angel
     {
         public frmInvMaint()
         {
@@ -34,14 +34,14 @@ namespace InventoryMaintenance
         }
 
         private void FillItemListBox()
-        { 
+        {
             lstItems.Items.Clear();
-            
+
             string filter = cboFilterBy.SelectedValue.ToString();
             IEnumerable<InvItem> filteredItems = null;
 
             // add items to the filteredItems collection based on FilterBy value
-            
+
             // change code to loop the filteredItems collection
             foreach (InvItem item in invItems)
             {
