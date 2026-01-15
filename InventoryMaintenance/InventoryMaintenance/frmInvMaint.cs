@@ -75,7 +75,7 @@ namespace InventoryMaintenance
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int i = lstItems.SelectedIndex;
+            //int i = lstItems.SelectedIndex;
             if (i != -1)
             {
                 InvItem invItem = (InvItem)invItems[i];
