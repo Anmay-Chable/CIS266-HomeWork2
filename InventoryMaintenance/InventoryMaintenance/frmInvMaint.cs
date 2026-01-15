@@ -41,10 +41,22 @@ namespace InventoryMaintenance
             IEnumerable<InvItem> filteredItems = null;
 
             // add items to the filteredItems collection based on FilterBy value
-
-            // change code to loop the filteredItems collection
-            foreach (InvItem item in invItems)
+            if (filter == "All")
             {
+                filteredItems = invItems.OrderBy(item => item.Description);
+            }
+            else
+            {
+                filteredItems = invItems.
+                    Where(item => (filter == "Under $10" && item.Price < 10)
+                    || (filter == "$10 to $50" && item.Price >= 10 && item.Price <= 50)
+                    || (filter == "Over $50" && item.Price > 50))
+                    .OrderBy(item => item.Description);
+            }
+
+            lstItems.Items.Clear();
+            foreach (InvItem item in filteredItems)
+            { // Use filteredItems here
                 lstItems.Items.Add(item.DisplayText);
             }
         }
