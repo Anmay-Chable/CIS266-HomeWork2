@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.lvInvoiceLineItems = new System.Windows.Forms.ListView();
             this.InvoiceID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.InvoiceDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.InvoiceTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProductCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UnitPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,8 +41,6 @@
             this.invoiceLineItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.invoiceLineItemsTableAdapter = new InvoiceLineItems.MMABooksDataSetTableAdapters.InvoiceLineItemsTableAdapter();
             this.tableAdapterManager = new InvoiceLineItems.MMABooksDataSetTableAdapters.TableAdapterManager();
-            this.InvoiceDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.InvoiceTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.mMABooksDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceLineItemsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -56,9 +56,9 @@
             this.Quantity,
             this.ItemTotal});
             this.lvInvoiceLineItems.HideSelection = false;
-            this.lvInvoiceLineItems.Location = new System.Drawing.Point(1, -1);
+            this.lvInvoiceLineItems.Location = new System.Drawing.Point(12, 12);
             this.lvInvoiceLineItems.Name = "lvInvoiceLineItems";
-            this.lvInvoiceLineItems.Size = new System.Drawing.Size(597, 417);
+            this.lvInvoiceLineItems.Size = new System.Drawing.Size(611, 417);
             this.lvInvoiceLineItems.TabIndex = 0;
             this.lvInvoiceLineItems.UseCompatibleStateImageBehavior = false;
             this.lvInvoiceLineItems.View = System.Windows.Forms.View.Details;
@@ -67,6 +67,17 @@
             // 
             this.InvoiceID.Text = "InvoiceID";
             this.InvoiceID.Width = 74;
+            // 
+            // InvoiceDate
+            // 
+            this.InvoiceDate.Text = "InvoiceDate";
+            this.InvoiceDate.Width = 85;
+            // 
+            // InvoiceTotal
+            // 
+            this.InvoiceTotal.Text = "InvoiceTotal";
+            this.InvoiceTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.InvoiceTotal.Width = 81;
             // 
             // ProductCode
             // 
@@ -117,22 +128,11 @@
             this.tableAdapterManager.StatesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = InvoiceLineItems.MMABooksDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // InvoiceDate
-            // 
-            this.InvoiceDate.Text = "InvoiceDate";
-            this.InvoiceDate.Width = 85;
-            // 
-            // InvoiceTotal
-            // 
-            this.InvoiceTotal.Text = "InvoiceTotal";
-            this.InvoiceTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.InvoiceTotal.Width = 81;
-            // 
             // frmInvoiceLineItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 418);
+            this.ClientSize = new System.Drawing.Size(649, 449);
             this.Controls.Add(this.lvInvoiceLineItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmInvoiceLineItems";

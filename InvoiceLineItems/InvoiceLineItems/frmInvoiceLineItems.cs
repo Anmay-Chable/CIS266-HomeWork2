@@ -37,23 +37,43 @@ namespace InvoiceLineItems
             // load the list view
             lvInvoiceLineItems.Items.Clear();
 
+
+            int currentInvoice = 0;
+
             foreach (var row in query)
             {
                 LineItem item = row.line;
                 Invoice inv = row.invoice;
 
-                // Add all of the columns to the list view item
-                ListViewItem lvi = new ListViewItem(item.InvoiceID.ToString());
-                lvi.SubItems.Add(inv.InvoiceDate.ToString("MM/dd/yyyy"));
-                lvi.SubItems.Add(inv.InvoiceTotal.ToString());
+
+                ListViewItem lvi;
+
+                if (currentInvoice != inv.InvoiceID)
+                {
+                    // Add all of the columns to the list view item
+                    lvi = new ListViewItem(item.InvoiceID.ToString());
+                    lvi.SubItems.Add(inv.InvoiceDate.ToString("MM/dd/yyyy"));
+                    lvi.SubItems.Add(inv.InvoiceTotal.ToString("C2"));
+                }
+                else 
+                {
+                    // Add spaces to the existing invoice list item 
+                    lvi = new ListViewItem("");
+                    lvi.SubItems.Add("");
+                    lvi.SubItems.Add("");
+                }
+
 
                 lvi.SubItems.Add(item.ProductCode);
-                lvi.SubItems.Add(item.UnitPrice.ToString());
+                lvi.SubItems.Add(item.UnitPrice.ToString("C2"));
                 lvi.SubItems.Add(item.Quantity.ToString());
-                lvi.SubItems.Add(item.ItemTotal.ToString());
+                lvi.SubItems.Add(item.ItemTotal.ToString("C2"));
 
                 //Add the full item to the list view
                 lvInvoiceLineItems.Items.Add(lvi);
+
+                //Set current invoice
+                currentInvoice = inv.InvoiceID;
             }
 
 
