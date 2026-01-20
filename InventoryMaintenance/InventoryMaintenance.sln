@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryMaintenance", "InventoryMaintenance\InventoryMaintenance.csproj", "{C55DFCE7-32F5-4989-9DA5-2F2D7D403D8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceLineItems", "..\..\Homework2\InvoiceLineItems\InvoiceLineItems\InvoiceLineItems.csproj", "{4D596CEF-D131-4093-BA07-9E7F6A4DF37A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceLineItems", "..\InvoiceLineItems\InvoiceLineItems\InvoiceLineItems.csproj", "{4D596CEF-D131-4093-BA07-9E7F6A4DF37A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

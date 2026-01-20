@@ -120,7 +120,6 @@
             this.ClientSize = new System.Drawing.Size(598, 418);
             this.Controls.Add(this.lvInvoiceLineItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmInvoiceLineItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice Line Items by Invoice Date";
             this.Load += new System.EventHandler(this.frmInvoiceLineItems_Load);

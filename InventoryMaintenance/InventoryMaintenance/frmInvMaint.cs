@@ -79,7 +79,7 @@ namespace InventoryMaintenance
             if (i != -1)
             {
                 //InvItem invItem = (InvItem)invItems[i];
-                string itemToDeleteDisplayText = lstItems.SelectedItem.ToString();
+                string itemToDeleteDisplayText = lstItems.Items[1].ToString();
                 string message = $"Are you sure you want to delete {itemToDeleteDisplayText}?";
                 DialogResult button =
                     MessageBox.Show(message, "Confirm Delete",
