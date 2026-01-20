@@ -33,5 +33,16 @@ namespace InvoiceLineItems.Properties {
                 return ((string)(this["MMABooksConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ZEN\\MSSQLSERVER2022;Initial Catalog=MMABooks;Integrated Security=True" +
+            ";TrustServerCertificate=True")]
+        public string MMABooksConnectionString1 {
+            get {
+                return ((string)(this["MMABooksConnectionString1"]));
+            }
+        }
     }
 }

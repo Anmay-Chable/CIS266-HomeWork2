@@ -76,6 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MMABooksDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MMABooksDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MMABooksDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MMABooksDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +107,17 @@
     </None>
     <None Include="MMABooksDataSet.xss">
       <DependentUpon>MMABooksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MMABooksDataSet1.xsc">
+      <DependentUpon>MMABooksDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MMABooksDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MMABooksDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MMABooksDataSet1.xss">
+      <DependentUpon>MMABooksDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

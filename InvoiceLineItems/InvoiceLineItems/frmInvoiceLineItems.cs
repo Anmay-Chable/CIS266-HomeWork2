@@ -22,7 +22,7 @@ namespace InvoiceLineItems
         private void frmInvoiceLineItems_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'mMABooksDataSet.InvoiceLineItems' table. You can move, or remove it, as needed.
-            this.invoiceLineItemsTableAdapter.Fill(this.mMABooksDataSet.InvoiceLineItems);
+            //this.invoiceLineItemsTableAdapter.Fill(this.mMABooksDataSet.InvoiceLineItems);
             lineItems = LineItemDB.GetLineItems();
 
             // query to get all of the line items
@@ -45,8 +45,6 @@ namespace InvoiceLineItems
                 //Add the full item to the list view
                 lvInvoiceLineItems.Items.Add(lvi);
             }
-
-
         }
 
         private void invoiceLineItemsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -54,7 +52,6 @@ namespace InvoiceLineItems
             this.Validate();
             this.invoiceLineItemsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.mMABooksDataSet);
-
         }
     }
 }
