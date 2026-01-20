@@ -39,6 +39,8 @@
             this.invoiceLineItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.invoiceLineItemsTableAdapter = new InvoiceLineItems.MMABooksDataSetTableAdapters.InvoiceLineItemsTableAdapter();
             this.tableAdapterManager = new InvoiceLineItems.MMABooksDataSetTableAdapters.TableAdapterManager();
+            this.InvoiceDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.InvoiceTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.mMABooksDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceLineItemsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +49,8 @@
             // 
             this.lvInvoiceLineItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.InvoiceID,
+            this.InvoiceDate,
+            this.InvoiceTotal,
             this.ProductCode,
             this.UnitPrice,
             this.Quantity,
@@ -86,7 +90,7 @@
             // 
             this.ItemTotal.Text = "ItemTotal";
             this.ItemTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ItemTotal.Width = 101;
+            this.ItemTotal.Width = 87;
             // 
             // mMABooksDataSet
             // 
@@ -113,6 +117,17 @@
             this.tableAdapterManager.StatesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = InvoiceLineItems.MMABooksDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // InvoiceDate
+            // 
+            this.InvoiceDate.Text = "InvoiceDate";
+            this.InvoiceDate.Width = 85;
+            // 
+            // InvoiceTotal
+            // 
+            this.InvoiceTotal.Text = "InvoiceTotal";
+            this.InvoiceTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.InvoiceTotal.Width = 81;
+            // 
             // frmInvoiceLineItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +135,7 @@
             this.ClientSize = new System.Drawing.Size(598, 418);
             this.Controls.Add(this.lvInvoiceLineItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "frmInvoiceLineItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice Line Items by Invoice Date";
             this.Load += new System.EventHandler(this.frmInvoiceLineItems_Load);
@@ -141,6 +157,8 @@
         private System.Windows.Forms.BindingSource invoiceLineItemsBindingSource;
         private MMABooksDataSetTableAdapters.InvoiceLineItemsTableAdapter invoiceLineItemsTableAdapter;
         private MMABooksDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ColumnHeader InvoiceDate;
+        private System.Windows.Forms.ColumnHeader InvoiceTotal;
     }
 }
 
