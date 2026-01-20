@@ -79,13 +79,17 @@ namespace InventoryMaintenance
             if (i != -1)
             {
                 //InvItem invItem = (InvItem)invItems[i];
-                string message = $"Are you sure you want to delete {invItem.Description}?";
+                string itemToDeleteDisplayText = lstItems.SelectedItem.ToString();
+                string message = $"Are you sure you want to delete {itemToDeleteDisplayText}?";
                 DialogResult button =
                     MessageBox.Show(message, "Confirm Delete",
                     MessageBoxButtons.YesNo);
                 if (button == DialogResult.Yes)
                 {
-                    invItems.Remove(invItem);
+                    // LINQ method-based query using FirstOrDefault
+                    InvItem itemToDelete = invItems.FirstOrDefault(item => item.DisplayText == itemToDeleteDisplayText);
+
+                    invItems.Remove(itemToDelete);
                     InvItemDB.SaveItems(invItems);
                     FillItemListBox();
                 }
